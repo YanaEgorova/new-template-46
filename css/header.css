@@ -1,0 +1,58 @@
+.header__wrapper {
+    position: relative;
+    background-color: var(--first-brand-color);
+}
+.header {
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.header::before, .hero::before  {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -1rem;
+    width: 10rem;
+    height: 100%;
+    background-color: var(--main-bg-color);
+}
+.hero::before  {
+    background-image: url('../img/dog-paw.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.header__svg {
+    fill: var(--main-text-color);
+}
+.cart__btn {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    position: relative;
+    z-index: 9;
+}
+.cart__btn .cart__span {
+    font-size: 2.2rem;
+    color: inherit;
+    font-family: var(--title-font);
+    margin-left: 1rem;
+    margin: 0 1rem;
+}
+.cart__btn svg {
+    width: 3rem;
+    margin: 0 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .cart__btn svg {
+        transition: all 0.3s ease-in-out;
+    }
+    .cart__btn:hover svg {
+        transform: scale(1.4);
+    }
+}
